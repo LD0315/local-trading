@@ -1,0 +1,10 @@
+html{
+    font-size: 62.5%; /* default font size for browser is 16px.  16px * 62.5 = 10px = 1 rem (rem is more responsive to different browsers*/
+    box-sizing: border-box;
+}
+
+body{
+    font: 1.6rem Helvetica;
+    height: 100vh;
+    margin: 0;
+}
