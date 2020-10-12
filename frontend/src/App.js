@@ -49,7 +49,7 @@ function App() {
                         <div className="product">
                             <img className="product-image" src={product.image} alt="product" />
                             <div className="product-name">
-                                <a href="product.html" src={product.name}> </a>
+                                <a href="product.html">{product.name} </a>
                             </div>
                             <div className="product-brand">{product.brand}</div>
                             <div className="product-price">${product.price}</div>

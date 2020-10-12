@@ -5,7 +5,7 @@ export default {
         category: 'Fruits',
         image: '/images/pineapple.jpg',
         price: 15,
-        brnad: 'Solomon Island',
+        brand: 'Solomon Island',
         rating: 4.5,
         numReviews: 10
      },
@@ -14,7 +14,7 @@ export default {
         category: 'Fruits',
         image: '/images/pineapple.jpg',
         price: 20,
-        brnad: 'Solomon Island',
+        brand: 'Solomon Island',
         rating: 4.9,
         numReviews: 15
      },
@@ -23,7 +23,7 @@ export default {
         category: 'Vegetables',
         image: '/images/pineapple.jpg',
         price: 7,
-        brnad: 'Solomon Island',
+        brand: 'Solomon Island',
         rating: 4.2,
         numReviews: 8
      },
@@ -32,8 +32,8 @@ export default {
         category: 'Fruits',
         image: '/images/pineapple.jpg',
         price: 9,
-        brnad: 'Solomon Island',
-        rating: 4.2,
+        brand: 'Solomon Island',
+        rating: 3.9,
         numReviews: 12
      },
      {
@@ -41,8 +41,8 @@ export default {
         category: 'Vegetables',
         image: '/images/pineapple.jpg',
         price: 6,
-        brnad: 'Solomon Island',
-        rating: 4.2,
+        brand: 'Solomon Island',
+        rating: 4.4,
         numReviews: 20
      },
      {
@@ -50,8 +50,8 @@ export default {
         category: 'Vegetables',
         image: '/images/pineapple.jpg',
         price: 10,
-        brnad: 'Solomon Island',
-        rating: 4.2,
+        brand: 'Solomon Island',
+        rating: 5.0,
         numReviews: 11
      },
 ]
