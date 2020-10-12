@@ -1,5 +1,4 @@
 import React from 'react';
-// import './App.css';
 
 function App() {
   return (
@@ -35,7 +34,7 @@ function App() {
                 <ul className="products">
                     <li> 
                         <div className="product">
-                            <img className="product-image" src="images/pineapple.jpg" alt="product"/>
+                            <img className="product-image" src="/images/pineapple.jpg" alt="product"/>
                             <div className="product-name">
                                 <a href="product.html">Pineapple</a>
                             </div>
