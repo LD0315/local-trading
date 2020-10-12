@@ -1,11 +1,20 @@
 import React from 'react';
 
 function App() {
+
+  const openMenu = () => {
+    document.querySelector(".sidebar").classList.add("open");
+  }
+
+  const closeMenu = () => {
+    document.querySelector(".sidebar").classList.remove("open");
+  }
+
   return (
     <div className="grid-container">
         <header className="header">
             <div className="brand">
-                <button onclick="openMenu()">
+                <button onClick={openMenu}>
                     &#9776;
                 </button>
                 <a href="index.html">LOCAL TRADING</a>
@@ -17,7 +26,7 @@ function App() {
         </header>
         <aside className="sidebar">
             <h3 className="sidebar-title">Shopping Categories</h3>
-            <button className="sidebar-close-button" onclick="closeMenu()">x</button>
+            <button className="sidebar-close-button" onClick={closeMenu}>x</button>
             <ul>
                 <li>
                     <a href="index.html">Fruites</a>
@@ -46,7 +55,7 @@ function App() {
                     </li> 
                     <li> 
                         <div className="product">
-                            <img className="product-image" src="images/pineapple.jpg" alt="product"/>
+                            <img className="product-image" src="/images/pineapple.jpg" alt="product"/>
                             <div className="product-name">
                                 <a href="product.html">Pineapple</a>
                             </div>
@@ -58,7 +67,7 @@ function App() {
                     </li> 
                     <li> 
                         <div className="product">
-                            <img className="product-image" src="images/pineapple.jpg" alt="product"/>
+                            <img className="product-image" src="/images/pineapple.jpg" alt="product"/>
                             <div className="product-name">
                                 <a href="product.html">Pineapple</a>
                             </div>
@@ -70,7 +79,7 @@ function App() {
                     </li> 
                     <li> 
                         <div className="product">
-                            <img className="product-image" src="images/pineapple.jpg" alt="product"/>
+                            <img className="product-image" src="/images/pineapple.jpg" alt="product"/>
                             <div className="product-name">
                                 <a href="product.html">Pineapple</a>
                             </div>
@@ -82,7 +91,7 @@ function App() {
                     </li> 
                     <li> 
                         <div className="product">
-                            <img className="product-image" src="images/pineapple.jpg" alt="product"/>
+                            <img className="product-image" src="/images/pineapple.jpg" alt="product"/>
                             <div className="product-name">
                                 <a href="product.html">Pineapple</a>
                             </div>
@@ -94,7 +103,7 @@ function App() {
                     </li> 
                     <li> 
                         <div className="product">
-                            <img className="product-image" src="images/pineapple.jpg" alt="product"/>
+                            <img className="product-image" src="/images/pineapple.jpg" alt="product"/>
                             <div className="product-name">
                                 <a href="product.html">Pineapple</a>
                             </div>
