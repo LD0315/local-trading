@@ -19,7 +19,7 @@ function ProductScreen(props) {
                         <h4>{product.name}</h4>
                     </li>
                     <li>
-                        
+                        {product.rating} Starts ({product.numReviews} Reviews)
                     </li>
                 </ul>
 
