@@ -10,10 +10,11 @@ function ProductScreen(props) {
           <Link to="/">Back to result</Link>
         </div>
         <div className="details"></div>
+         
             <div className="details-image">
                 <img src={product.image} alt="product" ></img>
             </div>
-
+        
             <div className="details-info">
                 <ul>
                     <li>
@@ -51,7 +52,7 @@ function ProductScreen(props) {
                         </select>
                     </li>
                     <li>
-                        <button>Add to Cart</button>
+                        <button className="button">Add to Cart</button>
                     </li>
                 </ul>
             </div>
