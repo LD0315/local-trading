@@ -1,6 +1,7 @@
 export default {
     products: [
       {
+        _id: '1',
         name: 'Pinenapple',
         category: 'Fruits',
         image: '/images/pineapple.jpg',
@@ -10,6 +11,7 @@ export default {
         numReviews: 10
      },
      {
+        _id: '2',
         name: 'Coconut',
         category: 'Fruits',
         image: '/images/pineapple.jpg',
@@ -19,6 +21,7 @@ export default {
         numReviews: 15
      },
      {
+        _id: '3',
         name: 'Avocado',
         category: 'Vegetables',
         image: '/images/pineapple.jpg',
@@ -28,6 +31,7 @@ export default {
         numReviews: 8
      },
      {
+        _id: '4',
         name: 'Watermelon',
         category: 'Fruits',
         image: '/images/pineapple.jpg',
@@ -37,6 +41,7 @@ export default {
         numReviews: 12
      },
      {
+        _id: '5',
         name: 'Eggplant',
         category: 'Vegetables',
         image: '/images/pineapple.jpg',
@@ -46,6 +51,7 @@ export default {
         numReviews: 20
      },
      {
+        _id: '6',
         name: 'Tomato',
         category: 'Vegetables',
         image: '/images/pineapple.jpg',
