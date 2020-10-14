@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import data from '../data';
 import { Link } from 'react-router-dom';
-
+import axios from 'axios';
 function HomeScreen (props) {
 
   // react hook
@@ -9,7 +9,10 @@ function HomeScreen (props) {
 
   // fetch data from server
   useEffect(() => {
-    effect
+    const fetchData = async () => {
+      const {data} = await axios.get("/api/products");
+      setProduct(data);
+    }
     return () => {
       //
     }
