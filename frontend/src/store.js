@@ -1,5 +1,5 @@
 import { createStore, combineReducers } from 'redux';
-import { productListReducer } from './reducders/productReducers';
+import { productListReducer } from './reducers/productReducers';
 
 const inistialState = {}
 const reducer = combineReducers({
@@ -7,3 +7,5 @@ const reducer = combineReducers({
     productList: productListReducer, 
 })
 const store = createStore(reducer, inistialState);
+
+export default store;
