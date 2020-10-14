@@ -3,12 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useSelector, useDispatch } from 'react-redux';
-const dispatch = useDispatch();
+import { listProducts } from '../actions/productActions';
 
 function HomeScreen(props) {
-
   // react hook
-  const [products, setProduct] = useState([]); // default value is empty array
+  // const [products, setProduct] = useState([]); // default value is empty array
   const productList = useSelector(state => state.productList);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
@@ -28,7 +27,11 @@ function HomeScreen(props) {
     };
   }, [])
 
-    return <ul className="products">
+    return (
+    loading? <div>Loading...</div> :
+    error? <div>{error}</div> :
+    // if not loading, show list of products
+    <ul className="products">
     {
       products.map(product => 
         <li key={product._id}> 
@@ -43,6 +46,8 @@ function HomeScreen(props) {
        </li>)
       }
   </ul>
-}
+  )
+};
+  
 
 export default HomeScreen;
