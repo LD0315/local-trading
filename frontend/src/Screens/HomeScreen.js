@@ -1,8 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import data from '../data';
 import { Link } from 'react-router-dom';
 
 function HomeScreen (props) {
+
+  // react hook
+  const [product, setProduct] = useState([]); // default value is empty array
+
+  // fetch data from server
+  useEffect(() => {
+    effect
+    return () => {
+      //
+    }
+  }, [])
+
     return <ul className="products">
     {
       data.products.map(product => 
