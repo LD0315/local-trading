@@ -20,7 +20,7 @@ export default {
         brand: 'Solomon Island',
         rating: 4.9,
         numReviews: 15,
-        countInStock: 5
+        countInStock: 0
      },
      {
         _id: '3',
