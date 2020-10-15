@@ -13,4 +13,15 @@ catch(error){
 }
 }
 
-export { listProducts }
+const detailsProduct = (productId) => (dispatch) => {
+    try {
+        dispatch( { type: PRODUCT_LIST_REQUEST, payload: productId } );
+        const { data } = await axios.get("/api/products/" + productId);
+        dispatch( { type: PRODUCT_LIST_SUCCESS, payload: data });
+    } catch (error) {
+        dispatch( { type: PRODUCT_LIST_FAIL, payload: error.message });
+
+    }
+}
+
+export { listProducts, detailsProduct }
