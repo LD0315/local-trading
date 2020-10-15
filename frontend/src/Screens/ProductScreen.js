@@ -7,12 +7,12 @@ import { detailsProduct } from '../actions/productActions';
 function ProductScreen(props) {
     //console.log(props.match.params.id);
     //const product = data.products.find(x => x._id === props.match.params.id);
-    const productDetails = useSelector(state => state.productDetails);
+    const productDetails = useSelector((state) => state.productDetails);
     const { product, loading, error } = productDetails;
-    const dispatch = useDispatch;
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        dispatch(detailsProduct());
+        dispatch(detailsProduct(props.match.params.id));
         return () => {
            
         };
