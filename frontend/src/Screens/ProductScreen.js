@@ -7,7 +7,7 @@ import { detailsProduct } from '../actions/productActions';
 function ProductScreen(props) {
     //console.log(props.match.params.id);
     //const product = data.products.find(x => x._id === props.match.params.id);
-    const productDetails = useSelector((state) => state.productDetails);
+    const productDetails = useSelector(state => state.productDetails);
     const { product, loading, error } = productDetails;
     const dispatch = useDispatch();
 
@@ -18,16 +18,19 @@ function ProductScreen(props) {
         };
     }, [])
 
-    return <div>
+    return (
+      <div>
+        
         <div className="back-to-result">
           <Link to="/">Back to result</Link>
         </div>
-        {loading? <div>Loading...</div>: 
-        error? <div>{error} </div>:
-        (
+        {loading ? (<div>Loading...</div>) :
+         error ? ( <div>{error} </div> ) : 
+         (
+          <>
           <div className="details">
             <div className="details-image">
-                <img src={product.image} alt="product" ></img>
+                <img src={product.image} alt="product"></img>
             </div>
         
             <div className="details-info">
@@ -71,10 +74,13 @@ function ProductScreen(props) {
                     </li>
                 </ul>
             </div>
-        </div>
-      )  
+        </div> 
+     </>
+     )
     }
-    </div>   
+  </div>
+ )
 }
+
 
 export default ProductScreen;
