@@ -1,5 +1,5 @@
 import Axios from "axios"
-import cookie from "js-cookie";
+
 import { CART_ADD_ITEM } from "../constants/cartConstants";
 
 const addToCart = (productId, qty) => async (dispatch, getState) => {
@@ -16,7 +16,7 @@ const addToCart = (productId, qty) => async (dispatch, getState) => {
         }
     });
     const { cart: { cartItems } } = getState();
-    cookie.set("cartItems", JSOn.stringfy(cartItems));
+    
 
     } catch (error) {
 

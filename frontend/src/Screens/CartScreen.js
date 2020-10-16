@@ -11,9 +11,7 @@ function CartScreen(props) {
   const productId = props.match.params.id;
   const qty = props.location.search ? Number(props.location.search.split("=")[1]) : 1;
   const dispatch = useDispatch();
-  const removeFromCartHandler = (productId) => {
-    dispatch(removeFromCart(productId));
-  }
+  
   useEffect(() => {
     if (productId) {
       dispatch(addToCart(productId, qty));
@@ -53,10 +51,10 @@ function CartScreen(props) {
                   </div>
                   <div>
                     Qty:
-                    <select value={item.qty} onChange={(e) => dispatch(addToCart(item.product, e.target.value))}>
-                        {[...Array(item.countInStock).keys()].map(x =>
-                            <option key={x + 1} value={x + 1}>{x + 1}</option>
-                        )}
+                    <select>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
                     </select>
                    
                   </div>
@@ -76,7 +74,7 @@ function CartScreen(props) {
         :
          $ {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
       </h3>
-      <button className="button primary full-width" disabled={cartItems.length === 0}>
+      <button className="button primary" disabled={cartItems.length === 0}>
         Proceed to Checkout
       </button>
 
