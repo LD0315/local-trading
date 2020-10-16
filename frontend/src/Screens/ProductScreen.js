@@ -49,7 +49,7 @@ function ProductScreen(props) {
                         {product.rating} Starts ({product.numReviews} Reviews)
                     </li>
                     <li>
-                        <b>Price: {product.price}</b>
+                        Price: <b>${product.price}</b>
                     </li>
                     <li>
                         Description:
@@ -78,7 +78,10 @@ function ProductScreen(props) {
                     </li>
                     <li>
                         {product.countInStock > 0 && (
-                            <button onClick={handleAddToCart} className="button primary">
+                            <button 
+                            onClick={handleAddToCart} 
+                            className="button primary"
+                            >
                             Add to Cart
                             </button> 
                         )}
