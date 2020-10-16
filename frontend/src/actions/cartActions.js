@@ -14,6 +14,7 @@ const addToCart = (productId, qty) => async (dispatch) => {
             qty
         }
     });
+    const { cart: { cartItems }} = getState();
 
     } catch (error) {
 
