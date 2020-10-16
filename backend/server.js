@@ -1,6 +1,6 @@
 import express from 'express';
 import data from './data';
-import dotenv from 'dotenv';
+import dotenv from '.env';
 import config from './config';
 import mongoose from 'mongoose';
 import userRoute from './routes/userRoute';
