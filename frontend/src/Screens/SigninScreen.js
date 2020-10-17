@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import { Link } from 'react-router-dom'
 
 
 function SigninScreen(props) {
     
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -14,10 +17,17 @@ function SigninScreen(props) {
         };
     }, [])
 
+    const submitHandler = (e) => {
+        e.preventDefault();
+
+    }
 
     return <div className="form">
         <form onSubmit={submitHandler} >
             <ul className="form-container">
+                <li>
+                    <h3>Signin</h3>
+                </li>
                 <li>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)}>
