@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post('/signin', async (req, res) => {
 
-    const singleUser = await User.findOne({
+    const signinUser = await User.findOne({
         email: req.body.email,
         password: req.body.password
     });
@@ -15,7 +15,7 @@ router.post('/signin', async (req, res) => {
             name: signinUser.name,
             email: signinUser.email,
             isAdmin: signinUser.isAdmin,
-            token: getToken(user)
+            token: getToken(signinUser)
         })
 
     } else {
