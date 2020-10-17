@@ -14,10 +14,12 @@ function RegisterScreen(props) {
     const { loading, userInfo, error } = userRegister;
     const dispatch = useDispatch();
 
+    const redirect = props.location.serach ? props.location.search.split("=")[1] : '/';
+
     useEffect(() => {
         // if user info exists, redirect to homepage
         if(userInfo){
-            props.history.push("/");
+            props.history.push(redirect);
         }
         return () => {
            

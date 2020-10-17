@@ -11,11 +11,12 @@ function SigninScreen(props) {
     const userSignin = useSelector( state => state.userSignin );
     const { loading, userInfo, error } = userSignin;
     const dispatch = useDispatch();
+    const redirect = props.location.search ? props.location.serach.split("=")[1] : '/';
 
     useEffect(() => {
         // if user info exists, redirect to homepage
         if(userInfo){
-            props.history.push("/");
+            props.history.push(redirect);
         }
         return () => {
            
@@ -38,7 +39,7 @@ function SigninScreen(props) {
                     {error && <div>{error}</div>}
                 </li>
                 <li>
-                    <label for="email">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)}>
                     </input>
                 </li>
