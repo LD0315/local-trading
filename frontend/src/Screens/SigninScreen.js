@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import {useSelector, useDispatch} from 'react-redux';
-import { Link } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { signin } from '../actions/userActions';
 
 
 function SigninScreen(props) {
@@ -19,14 +20,14 @@ function SigninScreen(props) {
 
     const submitHandler = (e) => {
         e.preventDefault();
-
+        dispatch(signin(email, password));
     }
 
     return <div className="form">
         <form onSubmit={submitHandler} >
             <ul className="form-container">
                 <li>
-                    <h3>Signin</h3>
+                    <h2>Sign-In</h2>
                 </li>
                 <li>
                     <label for="email">Email</label>
@@ -39,13 +40,13 @@ function SigninScreen(props) {
                     </input>
                 </li>
                 <li>
-                    <button type="submit" className="button primary">Signin</button>
+                    <button type="submit" className="button primary full-width">Sign in</button>
                 </li>
                 <li>
-                    New to local trading?
+                    New to LOCAL TRADING?
                 </li>
                 <li>
-                    <Link to="/register" className="button full-width">Create yout local trading account</Link>
+                  <Link to="/register" className="button secondary full-width text-center">Create yout local trading account</Link>
                 </li>
             </ul>
 
