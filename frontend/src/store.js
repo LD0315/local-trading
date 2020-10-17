@@ -8,7 +8,10 @@ import { userSigninReducer, userRegisterReducer } from './reducers/userReducers'
 const cartItems = Cookie.getJSON("cartItems") || [];
 const userInfo = Cookie.getJSON("userInfo") || null;
 
-const inistialState = { cart: { cartItems }, userSignin: { userInfo } };
+const inistialState = { 
+    cart: { cartItems }, 
+    userSignin: { userInfo } 
+};
 const reducer = combineReducers({
     //reducer: return new state based on that action
     productList: productListReducer, 
