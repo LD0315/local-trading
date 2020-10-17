@@ -8,15 +8,19 @@ function SigninScreen(props) {
     
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const userSignin = useSelector( state => state.userSignin );
+    const { loading, userInfo, error } = userSignin;
     const dispatch = useDispatch();
 
     useEffect(() => {
-        
+        // if user info exists, redirect to homepage
+        if(userInfo){
+            props.history.push("/");
+        }
         return () => {
            
         };
-    }, [])
+    }, [userInfo]);
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -30,12 +34,16 @@ function SigninScreen(props) {
                     <h2>Sign-In</h2>
                 </li>
                 <li>
+                    {loading && <div>Loading...</div>}
+                    {error && <div>{error}</div>}
+                </li>
+                <li>
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)}>
                     </input>
                 </li>
                 <li>
-                    <label for="password">Password</label>
+                    <label htmlFor="password">Password</label>
                     <input type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)}>
                     </input>
                 </li>
