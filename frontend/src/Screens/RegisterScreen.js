@@ -14,12 +14,12 @@ function RegisterScreen(props) {
     const { loading, userInfo, error } = userRegister;
     const dispatch = useDispatch();
 
-    const redirect = props.location.serach ? props.location.search.split("=")[1] : '/';
+    //const redirect = props.location.serach ? props.location.search.split("=")[1] : '/';
 
     useEffect(() => {
         // if user info exists, redirect to homepage
         if(userInfo){
-            props.history.push(redirect);
+            props.history.push('/');
         }
         return () => {
            
@@ -61,7 +61,7 @@ function RegisterScreen(props) {
 
                 <li>
                     <label htmlFor="rePassword">Re-Enter Password</label>
-                    <input type="rePassword" id="rePassword" name="rePassword" onChange={(e) => setPassword(e.target.value)}>
+                    <input type="rePassword" id="rePassword" name="rePassword" onChange={(e) => setRePassword(e.target.value)}>
                     </input>
                 </li>
 

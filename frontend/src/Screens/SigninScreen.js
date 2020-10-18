@@ -11,12 +11,12 @@ function SigninScreen(props) {
     const userSignin = useSelector( state => state.userSignin );
     const { loading, userInfo, error } = userSignin;
     const dispatch = useDispatch();
-    const redirect = props.location.search ? props.location.serach.split("=")[1] : '/';
+    //const redirect = props.location.search ? props.location.serach.split("=")[1] : '/';
 
     useEffect(() => {
         // if user info exists, redirect to homepage
         if(userInfo){
-            props.history.push(redirect);
+            props.history.push('/');
         }
         return () => {
            
