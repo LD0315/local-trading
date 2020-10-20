@@ -1,7 +1,7 @@
 {
   "name": "local-trading",
   "version": "1.0.0",
-  "description": "Demo : https://amazonaapp.herokuapp.com/",
+  "description": "",
   "main": "index.js",
   "dependencies": {
     "aws-sdk": "^2.702.0",

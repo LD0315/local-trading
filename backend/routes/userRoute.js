@@ -26,7 +26,21 @@ router.put('/:id', isAuth, async (req, res) => {
   }
 });
 */
-
+router.get('/admin', async (req, res) => {
+  try {
+    console.log("user");
+    const user = new User({
+      name: 'Kiala',
+      email: 'kiala@test.com',
+      password: '1234',
+      isAdmin: true,
+    });
+    const newUser = await user.save();
+    res.send(newUser);
+  } catch (error) {
+    res.send({ message: error.message });
+  }
+});
 
 router.post('/signin', async (req, res) => {
   const signinUser = await User.findOne({
@@ -66,19 +80,6 @@ router.post('/register', async (req, res) => {
   }
 });
 
-router.get('/admin', async (req, res) => {
-  try {
-    const user = new User({
-      name: 'Kiala',
-      email: 'kiala@test.com',
-      password: '1234',
-      isAdmin: true,
-    });
-    const newUser = await user.save();
-    res.send(newUser);
-  } catch (error) {
-    res.send({ message: error.message });
-  }
-});
+
 
 export default router;
