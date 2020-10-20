@@ -2,8 +2,9 @@ import express from 'express';
 import User from '../models/userModel';
 import { getToken } from '../util';
 
-const router = express.Router();
 
+//const express = require('express')
+const router = express();
 router.get('/createadmin', async (req, res) => {
   try {
     const user = new User({
@@ -12,9 +13,11 @@ router.get('/createadmin', async (req, res) => {
       password: '1234',
       isAdmin: true
     });
+   
     const newUser = await user.save();
     res.send(newUser);
   } catch (error) {
+
     res.send({ message: error.message });
   }
 });
@@ -41,7 +44,9 @@ router.put('/:id', isAuth, async (req, res) => {
 });
 */
 
+
 router.post('/signin', async (req, res) => {
+  console.log("signin function");
   const signinUser = await User.findOne({
     email: req.body.email,
     password: req.body.password

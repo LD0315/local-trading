@@ -1,6 +1,7 @@
 import jwt from 'jsonwebtoken';
 import config from './config';
 
+//const jwt = require('jsonwebtoken');
 
 const getToken = (user) => {
   return jwt.sign({
