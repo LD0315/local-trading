@@ -2,6 +2,101 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { signin } from '../actions/userActions';
+//import { Button, Form, Header, Input, Message, Segment } from 'semantic-ui-react';
+//import { login as loginFn } from './api/auth';
+//import { setToken } from './utils/auth';
+
+/*
+class Login extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      email: 'kiala@test.com',
+      error: null,
+      isLoading: false,
+      password: '1234'
+    };
+  }
+  
+    handleChange = event => {
+      const key = event.target.name;
+      const value = event.target.value;
+      this.setState({ [key]: value});
+    }
+
+    login = () => {
+      this.setState({ error: null, isLoading: true }, () => {
+          loginFn(this.state.email, this.state.password)
+              .then(jwtToken => {
+                  this.setState({ isLoading: false }, () => {
+                      setToken(jwtToken);
+                      const locationState = this.props.location.state;
+                      const redirectTo = (locationState && locationState.from) || '/';
+                      this.props.history.replace(redirectTo);
+                  });
+              })
+              .catch(error => this.setState({ error, isLoading: false }));
+      });
+  }
+
+  render() {
+      return (
+              <Form
+                  className="login-form" size="large"
+                  error={!!this.state.error}
+                  loading={this.state.isLoading}
+              >
+                  <Header size="large" textAlign="center">
+                      Learning Management System
+                  </Header>
+                  <Segment stacked>
+                      <Form.Field>
+                          <Input
+                              icon='user'
+                              iconPosition='left'
+                              name="email"
+                              onChange={this.handleChange}
+                              placeholder='E-mail address'
+                              value={this.state.email}
+                          />
+                      </Form.Field>
+                      <Form.Field>
+                          <Input
+                              icon='lock'
+                              iconPosition='left'
+                              name="password"
+                              onChange={this.handleChange}
+                              placeholder='Password'
+                              type="password"
+                              value={this.state.password}
+                          />
+                      </Form.Field>
+                     {!!this.state.error && (
+                          <Message
+                              error
+                              header="Login failed"
+                              content="Please check your email and password"
+                          />
+                     )}
+                      <Button
+                          size="large"
+                          fluid
+                          primary
+                          onClick={this.login}
+                      >
+                          Login
+                      </Button>
+                  </Segment>
+              </Form> 
+      );
+  }
+};
+
+export default Login;
+   
+*/
+
 
 function SigninScreen(props) {
 
@@ -19,6 +114,8 @@ function SigninScreen(props) {
       //
     };
   }, [userInfo]);
+
+  
 
   const submitHandler = (e) => {
     e.preventDefault();

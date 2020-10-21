@@ -8,6 +8,10 @@ import data from './data';
 //import productRoute from './routes/productRoute';
 //import orderRoute from './routes/orderRoute';
 // import uploadRoute from './routes/uploadRoute';
+const app = express();
+const cors = require('cors');
+app.use(cors());
+app.use(bodyParser.json());
 
 const mongodbUrl = config.MONGODB_URL;
 mongoose
@@ -18,10 +22,11 @@ mongoose
   })
   .catch((error) => console.log(error.reason));
 
-const app = express();
-app.use(bodyParser.json());
+
 /*app.use('/api/uploads', uploadRoute);*/
 app.use('/api/users', userRoute);
+console.log("!!!!!!!");
+console.log("userRoute");
 /*app.use('/api/products', productRoute);*/
 /*app.use('/api/orders', orderRoute);*/
 /*app.get('/api/config/paypal', (req, res) => {
@@ -48,7 +53,9 @@ app.get('/api/products', (req, res) => {
     res.send(data.products);
 })
 
+/*
 app.get('/admin', async (req, res) => {
+  console.log("#################");
   try {
     console.log("user");
     const user = new User({
@@ -81,9 +88,7 @@ app.get('/signin', async (req, res) => {
     res.status(401).send({ message: 'Invalid Email or Password.' });
   }
 });
-
-
-
+*/
 
 
 app.listen(config.PORT, () => {

@@ -4,7 +4,7 @@ import { getToken, isAuth } from '../util';
 
 const router = express.Router();
 
-/*
+
 
 router.put('/:id', isAuth, async (req, res) => {
   const userId = req.params.id;
@@ -25,10 +25,10 @@ router.put('/:id', isAuth, async (req, res) => {
     res.status(404).send({ message: 'User Not Found' });
   }
 });
-*/
+
 router.get('/admin', async (req, res) => {
   try {
-    console.log("user");
+    // console.log("user");
     const user = new User({
       name: 'Kiala',
       email: 'kiala@test.com',
